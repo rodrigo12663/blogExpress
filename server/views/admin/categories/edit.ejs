@@ -1,0 +1,26 @@
+<%- include ('../../partials/header.ejs');%>
+<%- include ('../../partials/navbar.ejs');%>
+<div class="container py-5">
+    
+    <div class="card">
+        
+            <div class="card-header  bg-light">
+                    Editar categoria
+                    <hr>
+            </div>
+            <div class="card-body">
+               
+                <form method="POST" action="/categories/edit/update">
+                    <label for="">Titulo</label><br>
+                    <input value="<%=category.title %>" class="form-control" type="text" name="title" placeholder="titulo da categoria"><br>
+                    <input value="<%=category.id %>" class="form-control" type="hidden" name="id">
+                    <button class="btn btn-success">Editar</button>
+                 </form>
+
+
+          
+            </div>
+    </div>
+</div>
+
+<%- include ('../../partials/footer.ejs');%>
